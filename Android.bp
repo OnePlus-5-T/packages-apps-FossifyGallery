@@ -1,0 +1,19 @@
+android_app_import {
+	name: "FossifyGallery",
+	apk: "FossifyGallery.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: true,
+	},
+	preprocessed: true,
+	overrides: ["Gallery2"],
+	required: ["fossifygallery-permissions.xml"],
+	vendor: true,
+}
+
+prebuilt_etc {
+	name: "fossifygallery-permissions.xml",
+	src: "fossifygallery-permissions.xml",
+	sub_dir: "default-permissions",
+	vendor: true,
+}
